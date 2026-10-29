@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071a1a">
+  <meta name="description" content="Tes refleksi kepribadian 100 pertanyaan tentang fungsi kognitif, pola Enneagram dan sayapnya, serta Tritype.">
+  <title>Catatan Kepribadian | Janorovic Volkov</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/fox.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/personality-test/test.css">
+</head>
+<body class="intro personality-page">
+  <div data-site-header></div>
+  <main class="content test-shell">
+    <nav class="language-switch" aria-label="Bahasa"><span>Bahasa</span><a href="/personality-test/en/">English</a><a href="/personality-test/id/" aria-current="page">Bahasa Indonesia</a></nav>
+    <section class="test-intro" id="intro" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="test-kicker"><span class="kicker-mark"></span> Refleksi diri · 100 pertanyaan</p>
+        <h1 id="page-title">Kepribadian,<br><em>dari tiga sudut</em></h1>
+        <p class="intro-lede">Kenali fungsi kognitif, motivasi inti, dan pola yang sering muncul dalam diri Anda. Satu rangkaian jawaban, tiga cara untuk memahami diri.</p>
+        <div class="intro-meta"><span><b>100</b> pernyataan</span><span><b>~15</b> menit</span><span><b>Privat</b> di perangkat ini</span></div>
+        <button class="action-button action-primary" id="start-button" type="button">Mulai tes <span aria-hidden="true">→</span></button>
+        <p class="disclaimer">Alat refleksi informal yang orisinal, bukan asesmen psikologis tervalidasi atau diagnosis. Jawaban tersimpan di browser ini.</p>
+      </div>
+      <aside class="intro-aside" aria-label="Tiga kerangka kepribadian">
+        <div class="lens lens-mbti"><span class="lens-number">01</span><div><h2>MBTI</h2><p>Jelajahi delapan pola fungsi kognitif dan perkiraan tipe yang diurutkan.</p></div><span class="lens-axis">Ni · Ne · Si · Se · Ti · Te · Fi · Fe</span></div>
+        <div class="lens lens-enneagram"><span class="lens-number">02</span><div><h2>Enneagram</h2><p>Refleksikan motivasi, tipe utama, dan sayap dari tipe yang berdekatan.</p></div><span class="lens-axis">Sembilan pola · dua sayap</span></div>
+        <div class="lens lens-tritype"><span class="lens-number">03</span><div><h2>Tritype</h2><p>Pola terkuat Anda pada masing-masing dari tiga pusat perhatian.</p></div><span class="lens-axis">Kepala · Hati · Naluri</span></div>
+        <div class="orbit-mark" aria-hidden="true"><span>KENALI<br>DIRI</span><i></i></div>
+      </aside>
+    </section>
+    <section class="quiz-view" id="quiz" hidden aria-labelledby="quiz-title">
+      <div class="quiz-topline"><div><p class="test-kicker"><span class="kicker-mark"></span> Catatan | <span id="page-label">01</span></p><h1 id="quiz-title">Jawablah sesuai dirimu</h1></div><p class="saved-label" id="saved-label" aria-live="polite">Progres tersimpan di perangkat ini</p></div>
+      <div class="progress-wrap"><div class="progress-copy"><span id="progress-count">0 dari 100 dijawab</span><span id="progress-percent">0%</span></div><div class="progress-track" role="progressbar" aria-label="Progres pertanyaan" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar"><span id="progress-fill"></span></div></div>
+      <p class="scale-intro">Nilai seberapa sesuai setiap pernyataan dengan diri Anda sehari-hari, bukan dengan diri yang Anda harapkan.</p>
+      <div class="question-list" id="question-list"></div><p class="page-error" id="page-error" role="alert" hidden>Pilih jawaban untuk setiap pernyataan sebelum melanjutkan.</p>
+      <nav class="quiz-controls" aria-label="Navigasi pertanyaan"><button class="action-button action-secondary" id="back-button" type="button">← Kembali</button><span class="page-counter" id="page-counter">Halaman 1 dari 10</span><button class="action-button action-primary" id="next-button" type="button">Lanjut <span aria-hidden="true">→</span></button></nav>
+      <div class="scale-legend" aria-label="Skala jawaban"><span><b>1</b> Sama sekali tidak</span><span><b>2</b> Sedikit</span><span><b>3</b> Kadang-kadang</span><span><b>4</b> Sebagian besar</span><span><b>5</b> Sangat sesuai</span></div>
+    </section>
+    <section class="results-view" id="results" hidden aria-labelledby="results-title" aria-live="polite">
+      <div class="results-heading"><p class="test-kicker"><span class="kicker-mark"></span> Catatan dirimu | selesai</p><h1 id="results-title">Sebuah potret,<br><em>bukan label</em></h1><p class="results-lede">Skor ini adalah bahan refleksi, bukan klasifikasi yang pasti. Peringkat tipe berdasarkan fungsi adalah model informal yang dibuat untuk kuesioner ini.</p></div>
+      <div class="result-feature-grid">
+        <article class="result-feature result-mbti"><span class="result-index">01 | FUNGSI KOGNITIF</span><p class="result-overline">Perkiraan susunan fungsi teratas</p><h2 id="mbti-type">----</h2><p class="result-description">Tipe ini paling mendekati skor fungsi Anda dalam pemeringkatan informal ini. Tipe lain yang skornya berdekatan juga layak dipertimbangkan.</p><div class="score-list" id="type-scores"></div></article>
+        <article class="result-feature result-enneagram"><span class="result-index">02 | MOTIVASI</span><p class="result-overline">Pola Enneagram utama + sayap</p><h2 id="enneagram-type">Tipe --</h2><p class="result-description" id="enneagram-copy"></p><div class="score-list" id="wing-scores"></div></article>
+      </div>
+      <section class="function-results" aria-labelledby="function-title"><div class="scores-heading"><div><p class="test-kicker"><span class="kicker-mark"></span> Profil fungsi</p><h2 id="function-title">Delapan cara mengolah informasi.</h2></div><p>Rata-rata jawaban relatif pada skala 1–5 yang sama.</p></div><div class="all-score-list" id="function-scores"></div></section>
+      <article class="tritype-result"><div><span class="result-index">03 | TIGA PUSAT</span><p class="result-overline">Kombinasi bergaya Tritype Anda</p><h2 id="tritype-type">---</h2></div><p class="result-description" id="tritype-copy"></p></article>
+      <section class="all-scores" aria-labelledby="all-scores-title"><div class="scores-heading"><div><p class="test-kicker"><span class="kicker-mark"></span> Gambaran lengkap</p><h2 id="all-scores-title">Setiap pola, dalam konteks.</h2></div><p>Skor menunjukkan kecenderungan relatif dalam kuesioner ini, bukan sifat yang tetap.</p></div><div class="all-score-list" id="enneagram-scores"></div></section>
+      <div class="result-actions"><button class="action-button action-primary" id="restart-button" type="button">Ulangi tes <span aria-hidden="true">↻</span></button><button class="action-button action-secondary" id="print-button" type="button">Cetak hasil <span aria-hidden="true">↗</span></button></div>
+      <p class="disclaimer results-disclaimer">Informal dan nonklinis. Organisasi MBTI, Enneagram, maupun Tritype tidak meninjau atau mendukung kuesioner ini. Hasil dapat berubah sesuai konteks, suasana hati, dan penafsiran.</p>
+    </section>
+  </main>
+  <script src="/script.js"></script>
+  <script src="/personality-test/id/test-content.js"></script>
+  <script src="/personality-test/test-engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071a1a">
+  <meta name="description" content="A 100-question reflective personality test exploring cognitive functions, Enneagram patterns and wings, and Tritype.">
+  <title>Personality Field Notes | Janorovic Volkov</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/fox.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/personality-test/test.css">
+</head>
+<body class="intro personality-page">
+  <div data-site-header></div>
+  <main class="content test-shell">
+    <nav class="language-switch" aria-label="Language"><span>Language</span><a href="/personality-test/en/" aria-current="page">English</a><a href="/personality-test/id/">Bahasa Indonesia</a></nav>
+    <section class="test-intro" id="intro" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="test-kicker"><span class="kicker-mark"></span> A 100-question self-reflection</p>
+        <h1 id="page-title">Personality,<br><em>in three lenses</em></h1>
+        <p class="intro-lede">Explore cognitive functions, core motivations, and the patterns you return to. One set of thoughtful answers, three different maps.</p>
+        <div class="intro-meta"><span><b>100</b> statements</span><span><b>~15</b> minutes</span><span><b>Private</b> on this device</span></div>
+        <button class="action-button action-primary" id="start-button" type="button">Begin the test <span aria-hidden="true">→</span></button>
+        <p class="disclaimer">An original, informal reflection tool, not a validated psychological assessment or diagnosis. Answers stay in this browser.</p>
+      </div>
+      <aside class="intro-aside" aria-label="The three personality frameworks">
+        <div class="lens lens-mbti"><span class="lens-number">01</span><div><h2>MBTI</h2><p>Explore eight cognitive-function patterns and a ranked type estimate.</p></div><span class="lens-axis">Ni · Ne · Si · Se · Ti · Te · Fi · Fe</span></div>
+        <div class="lens lens-enneagram"><span class="lens-number">02</span><div><h2>Enneagram</h2><p>Reflect on motivations, with a leading type and adjacent wing.</p></div><span class="lens-axis">Nine patterns · two wings</span></div>
+        <div class="lens lens-tritype"><span class="lens-number">03</span><div><h2>Tritype</h2><p>Your leading pattern in each of three centers of attention.</p></div><span class="lens-axis">Head · Heart · Gut</span></div>
+        <div class="orbit-mark" aria-hidden="true"><span>SELF<br>STUDY</span><i></i></div>
+      </aside>
+    </section>
+    <section class="quiz-view" id="quiz" hidden aria-labelledby="quiz-title">
+      <div class="quiz-topline"><div><p class="test-kicker"><span class="kicker-mark"></span> Field notes | <span id="page-label">01</span></p><h1 id="quiz-title">Answer as you are</h1></div><p class="saved-label" id="saved-label" aria-live="polite">Progress saved on this device</p></div>
+      <div class="progress-wrap"><div class="progress-copy"><span id="progress-count">0 of 100 answered</span><span id="progress-percent">0%</span></div><div class="progress-track" role="progressbar" aria-label="Questions answered" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar"><span id="progress-fill"></span></div></div>
+      <p class="scale-intro">Rate how much each statement sounds like you, based on your usual pattern rather than an ideal version of yourself.</p>
+      <div class="question-list" id="question-list"></div><p class="page-error" id="page-error" role="alert" hidden>Choose an answer for each statement to continue.</p>
+      <nav class="quiz-controls" aria-label="Question navigation"><button class="action-button action-secondary" id="back-button" type="button">← Back</button><span class="page-counter" id="page-counter">Page 1 of 10</span><button class="action-button action-primary" id="next-button" type="button">Continue <span aria-hidden="true">→</span></button></nav>
+      <div class="scale-legend" aria-label="Response scale"><span><b>1</b> Not at all</span><span><b>2</b> A little</span><span><b>3</b> Sometimes</span><span><b>4</b> Mostly</span><span><b>5</b> Very much</span></div>
+    </section>
+    <section class="results-view" id="results" hidden aria-labelledby="results-title" aria-live="polite">
+      <div class="results-heading"><p class="test-kicker"><span class="kicker-mark"></span> Your field notes | complete</p><h1 id="results-title">A portrait, <em>not a box</em></h1><p class="results-lede">These scores are prompts for reflection, not a definitive classification. The function-based type ranking is an informal model built for this questionnaire.</p></div>
+      <div class="result-feature-grid">
+        <article class="result-feature result-mbti"><span class="result-index">01 | COGNITIVE FUNCTIONS</span><p class="result-overline">Leading function-stack estimate</p><h2 id="mbti-type">----</h2><p class="result-description">This type is the closest match to your function scores in this informal ranking. Nearby results can be just as worth exploring.</p><div class="score-list" id="type-scores"></div></article>
+        <article class="result-feature result-enneagram"><span class="result-index">02 | MOTIVATIONS</span><p class="result-overline">Leading Enneagram pattern + wing</p><h2 id="enneagram-type">Type --</h2><p class="result-description" id="enneagram-copy"></p><div class="score-list" id="wing-scores"></div></article>
+      </div>
+      <section class="function-results" aria-labelledby="function-title"><div class="scores-heading"><div><p class="test-kicker"><span class="kicker-mark"></span> Function profile</p><h2 id="function-title">Eight ways of processing.</h2></div><p>Relative average response, shown on the same 1–5 scale.</p></div><div class="all-score-list" id="function-scores"></div></section>
+      <article class="tritype-result"><div><span class="result-index">03 | THREE CENTERS</span><p class="result-overline">Your Tritype-style combination</p><h2 id="tritype-type">---</h2></div><p class="result-description" id="tritype-copy"></p></article>
+      <section class="all-scores" aria-labelledby="all-scores-title"><div class="scores-heading"><div><p class="test-kicker"><span class="kicker-mark"></span> The full picture</p><h2 id="all-scores-title">Every pattern, in context.</h2></div><p>Scores show relative endorsement in this questionnaire, not fixed traits.</p></div><div class="all-score-list" id="enneagram-scores"></div></section>
+      <div class="result-actions"><button class="action-button action-primary" id="restart-button" type="button">Start again <span aria-hidden="true">↻</span></button><button class="action-button action-secondary" id="print-button" type="button">Print results <span aria-hidden="true">↗</span></button></div>
+      <p class="disclaimer results-disclaimer">Informal and non-clinical. No MBTI, Enneagram, or Tritype organization has reviewed or endorsed this questionnaire. Results can vary with context, mood, and interpretation.</p>
+    </section>
+  </main>
+  <script src="/script.js"></script>
+  <script src="/personality-test/en/test-content.js"></script>
+  <script src="/personality-test/test-engine.js"></script>
+</body>
+</html>
