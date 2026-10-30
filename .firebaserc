@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "janorovicvolkov"
-  }
+    "default": "janorovicvolkov",
+    "public": "janorovic"
+  },
+  "targets": {},
+  "etags": {}
 }
